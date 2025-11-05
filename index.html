@@ -7,14 +7,14 @@
     </title>
     <style>
       body{
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,1);
         color: white;
         padding: 10px;
         text-decoration: none;
-        font-family: arial;
+        font-family: monospace;
         font-size: 5vw;
       }
-      a{
+      a, p{
         margin: 5px;
         display: inline-block;
         border: 1px solid yellow;
@@ -26,15 +26,14 @@
     </style>
   </head>
   <body>
-    <a href="https://isegzidrafok.github.io/cd/">
+    <label>r.sayac: </label><a href="https://isegzidrafok.github.io/cd/">
       git
     </a>
+    <p>panel</p>
     <script>
       let hash = location.hash.slice(1);
-      if(hash === "pFptt7Cargc"){
-        alert("in my heart");
-      }else if(hash === "aSDBnm"){
-        alert("merhaba");
+      if(hash === "aSDBnm"){
+        prompt("");
       } 
       fetch("https://mysterious-mausoleum-6979qwq7pr47f5p4p-3000.app.github.dev/")
            .then(r=>r.json())
