@@ -35,7 +35,16 @@
         alert("in my heart");
       }else if(hash === "aSDBnm"){
         alert("merhaba");
-      }
+      } 
+      fetch("https://mysterious-mausoleum-6979qwq7pr47f5p4p-3000.app.github.dev/", 
+            {
+              method: "POST",
+              headers: {"Content-Type": "application/json"},
+              body: JSON.stringify({deger: 0})
+            })
+           .then(r=>r.json())
+      .then(r=>body.querySelector("a").textContent=r.sayac)
+        .catch(function(e){alert(e);});
     </script>
   </body>
 </html>
