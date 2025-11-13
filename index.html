@@ -29,8 +29,12 @@
     <label>r.sayac: </label><a href="https://isegzidrafok.github.io/cd/">
       git
     </a>
-    <p>panel↑</p>
+    <p>panel↑</p><p id="onrender">j</p>
     <script>
+      fetch("https://sunucu.onrender.com")
+      .then(r=>r.text())
+      .then(r=>document.getElementById("onrender").textContent=r)
+      .catch(function(e){alert(e);});
       let hash = location.hash.slice(1);
       if(hash === "aSDBnm"){
         prompt("");
