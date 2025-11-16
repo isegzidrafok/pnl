@@ -30,12 +30,16 @@
       git
     </a>
     <p>panel↑</p><p id="onrender">j</p>
-    <button id="pkill">pkill</button>
+    <button id="pkill">pkill</button><p id="pil">a</p>
     <script>
       let cnf;
       document.getElementById("pkill").addEventListener("click",function(a){
         alert(a);
         cnf = confirm("1?");
+        fetch("https://sayacasnucu.onrender.com")
+          .then(r=>r.text())
+          .then(r=>document.querySelector("#pil").textContent=r)
+          .catch(e=>alert(e));
       });
       fetch("https://sunucu.onrender.com")
       .then(r=>r.text())
